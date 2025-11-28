@@ -57,16 +57,16 @@ export const projects = [
         text: "360° spin view gives an immersive external look of the property.",
         video: "/videos/alpha-360.mp4",
       },
-      {
-        title: "3D Interior Walkthrough",
-        text: "Walk inside the interior using a smooth 3D guided tour.",
-        video: "/videos/alpha-walkthrough.mp4",
-      },
-      {
-        title: "High-Quality Virtual Tour",
-        text: "A premium virtual tour that showcases maximum details.",
-        video: "/videos/alpha-virtual-tour.mp4",
-      },
+      // {
+      //   title: "3D Interior Walkthrough",
+      //   text: "Walk inside the interior using a smooth 3D guided tour.",
+      //   video: "/videos/alpha-walkthrough.mp4",
+      // },
+      // {
+      //   title: "High-Quality Virtual Tour",
+      //   text: "A premium virtual tour that showcases maximum details.",
+      //   video: "/videos/alpha-virtual-tour.mp4",
+      // },
     ],
   },
 
@@ -92,16 +92,16 @@ export const projects = [
         text: "360° spin view gives an immersive external look of the property.",
         video: "/videos/alpha-360.mp4",
       },
-      {
-        title: "3D Interior Walkthrough",
-        text: "Walk inside the interior using a smooth 3D guided tour.",
-        video: "/videos/alpha-walkthrough.mp4",
-      },
-      {
-        title: "High-Quality Virtual Tour",
-        text: "A premium virtual tour that showcases maximum details.",
-        video: "/videos/alpha-virtual-tour.mp4",
-      },
+      // {
+      //   title: "3D Interior Walkthrough",
+      //   text: "Walk inside the interior using a smooth 3D guided tour.",
+      //   video: "/videos/alpha-walkthrough.mp4",
+      // },
+      // {
+      //   title: "High-Quality Virtual Tour",
+      //   text: "A premium virtual tour that showcases maximum details.",
+      //   video: "/videos/alpha-virtual-tour.mp4",
+      // },
     ],
   },
 ];
