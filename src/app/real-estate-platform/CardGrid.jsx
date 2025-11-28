@@ -8,20 +8,17 @@ const flipCardsData = [
   {
     title: "WHAT WE TAKE?",
     description: "We take your property dreams seriously.",
-    image:
-      "https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=800",
+    
   },
   {
     title: "WHAT WE MAKE?",
     description: "We make buying and selling seamless and smart.",
-    image:
-      "https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=800",
+    
   },
   {
     title: "WHAT YOU GOT?",
     description: "You get trusted results and insights.",
-    image:
-      "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=800",
+    
   },
 ];
 
@@ -53,7 +50,6 @@ export default function CardsGrid() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#1976d2",
             color: "#fff",
             cursor: "pointer",
             borderRadius: 3,
@@ -103,13 +99,13 @@ export default function CardsGrid() {
                 position: "absolute",
                 inset: 0,
                 borderRadius: 3,
-                backgroundImage: `url(${item.image})`,
+                backgroundColor:"#fff",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#fff",
+                color: "#0d0d0d",
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
                 boxShadow: 3,

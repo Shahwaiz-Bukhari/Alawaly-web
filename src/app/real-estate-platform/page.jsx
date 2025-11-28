@@ -8,7 +8,7 @@ import CardsGrid from "./CardGrid";
 export default function RealEstatePlatform() {
   const benefits = [
     { icon: <Home fontSize="large" />, title: "Easy Property Search" },
-    { icon: <Apartment fontSize="large" />, title: "Smart Listings" },
+    { icon: <Apartment fontSize="large" />, title: "Smart Listings option" },
     { icon: <AttachMoney fontSize="large" />, title: "Investment Insights" },
     { icon: <CheckCircle fontSize="large" />, title: "Secure Transactions" },
   ];
@@ -102,50 +102,53 @@ export default function RealEstatePlatform() {
         </Grid>
       </Box>
 
-      {/* BENEFITS */}
-      <Box sx={{ py: 8, px: { xs: 3, md: 10 }, mx: "auto", maxWidth: "1400px" }}>
-        <Typography variant="h4" fontWeight={600} align="center" gutterBottom>
-          Benefits
-        </Typography>
+     {/* BENEFITS */}
+<Box sx={{ py: 8, px: { xs: 3, md: 10 }, mx: "auto", maxWidth: "1400px" }}>
+  <Typography variant="h4" fontWeight={600} align="center" gutterBottom>
+    Benefits
+  </Typography>
 
-        <Grid
-          container
-          spacing={4}
-          mt={2}
-          justifyContent="center" // center the grid items
+  <Grid
+    container
+    spacing={4}
+    mt={2}
+    justifyContent="center"
+  >
+    {benefits.map((item, i) => (
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        md={3}
+        key={i}
+        sx={{ display: "flex", justifyContent: "center" }}
+      >
+        <Card
+          sx={{
+            width: { xs: 300 , sm: 260, md: 260 }, // 🔥 fixed width
+            height: 220,                              // 🔥 fixed height
+            p: 4,
+            borderRadius: 3,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+            transition: "0.3s",
+            textAlign: "center",
+            "&:hover": { transform: "translateY(-6px)" },
+          }}
         >
-          {benefits.map((item, i) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={3}
-              key={i}
-              sx={{ display: "flex", justifyContent: "center" }} // center each card
-            >
-              <Card
-                sx={{
-                  p: 4,
-                  borderRadius: 3,
-                  height: { xs: 200, md: 220 },
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-                  transition: "0.3s",
-                  "&:hover": { transform: "translateY(-6px)" },
-                }}
-              >
-                {item.icon}
-                <Typography variant="h6" mt={2} textAlign="center">
-                  {item.title}
-                </Typography>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+          {item.icon}
+          <Typography variant="h6" mt={2}>
+            {item.title}
+          </Typography>
+        </Card>
+      </Grid>
+    ))}
+  </Grid>
+</Box>
+
 
       {/* WHY ALAWALY */}
       <Box sx={{ py: 8, px: { xs: 3, md: 10 }, background: "#f5f5f5" }}>
@@ -173,6 +176,7 @@ export default function RealEstatePlatform() {
                   p: 3,
                   borderRadius: 3,
                   height: "100%",
+                  width: 260,
                   maxWidth: 300, // optional: limit width for uniformity
                   boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                   display: "flex",

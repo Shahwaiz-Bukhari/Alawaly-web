@@ -3,6 +3,7 @@ export const projects = [
     slug: "project-alpha",
     name: "Project Alpha",
     heroVideo: "/videos/alpha.mp4",
+    image: "/images/R10.webp",
     description:
       "Project Alpha is a complete digital real estate visualization experience.",
     sections: [
@@ -38,6 +39,7 @@ export const projects = [
     slug: "project-beta",
     name: "Project Beta",
     heroVideo: "/videos/beta.mp4",
+    image: "/images/smartspatial.webp",
     description: "High-end visualization for commercial real estate.",
     sections: [
       {
@@ -72,6 +74,7 @@ export const projects = [
     slug: "project-gamma",
     name: "Project Gamma",
     heroVideo: "/videos/gamma.mp4",
+    image: "/images/tour.webp",
     description: "A premium tour system built for luxury projects.",
     sections: [
       {
