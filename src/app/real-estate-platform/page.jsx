@@ -1,18 +1,8 @@
 "use client";
 
-import {
-  Box,
-  Typography,
-  Grid,
-  Card,
-} from "@mui/material";
-import {
-  Home,
-  Apartment,
-  AttachMoney,
-  CheckCircle,
-} from "@mui/icons-material";
-
+import React from "react";
+import { Box, Typography, Grid, Card } from "@mui/material";
+import { Home, Apartment, AttachMoney, CheckCircle } from "@mui/icons-material";
 import CardsGrid from "./CardGrid";
 
 export default function RealEstatePlatform() {
@@ -32,12 +22,15 @@ export default function RealEstatePlatform() {
   ];
 
   return (
-    <Box sx={{ width: "100%" }}>
-
+    <Box sx={{ width: "100%", overflowX: "hidden" }}>
       {/* HERO SECTION */}
       <Box
         sx={{
-          minHeight: "90vh",
+          width: "100%",
+          minHeight: { xs: "60vh", md: "90vh" },
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           position: "relative",
           overflow: "hidden",
         }}
@@ -50,35 +43,42 @@ export default function RealEstatePlatform() {
           loop
           playsInline
           sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            zIndex: 1,
           }}
         />
 
         <Box
           sx={{
-            position: "absolute",
-            bottom: "30%",
-            left: "50%",
-            transform: "translateX(-50%)",
+            position: "relative",
             textAlign: "center",
             color: "#fff",
-            textShadow: "0 0 10px rgba(0,0,0,0.6)",
+            zIndex: 2,
+            px: 2,
           }}
         >
-          <Typography variant="h3" fontWeight={600}>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: { xs: "1.8rem", md: "3rem" }, fontWeight: 600 }}
+          >
             Welcome to Alawaly Real Estate
           </Typography>
-          <Typography variant="h6" mt={1}>
+          <Typography
+            variant="subtitle1"
+            sx={{ mt: 1, fontSize: { xs: "1rem", md: "1.25rem" } }}
+          >
             Transforming the way you buy, sell, and invest in real estate
           </Typography>
         </Box>
       </Box>
-
       {/* ABOUT SECTION */}
       <Box sx={{ py: 8, px: { xs: 3, md: 10 }, backgroundColor: "#fafafa" }}>
-        <Grid container spacing={4} alignItems="center">
+        <Grid container spacing={4} alignItems="center" sx={{ mx: "auto", maxWidth: "1400px" }}>
           <Grid item xs={12} md={6}>
             <Typography variant="h4" fontWeight={600} color="#0d0d0d" gutterBottom>
               About Real Estate Digital Platform
@@ -103,19 +103,31 @@ export default function RealEstatePlatform() {
       </Box>
 
       {/* BENEFITS */}
-      <Box sx={{ py: 8, px: { xs: 3, md: 10 } }}>
+      <Box sx={{ py: 8, px: { xs: 3, md: 10 }, mx: "auto", maxWidth: "1400px" }}>
         <Typography variant="h4" fontWeight={600} align="center" gutterBottom>
           Benefits
         </Typography>
 
-        <Grid container spacing={4} mt={2}>
+        <Grid
+          container
+          spacing={4}
+          mt={2}
+          justifyContent="center" // center the grid items
+        >
           {benefits.map((item, i) => (
-            <Grid item xs={12} sm={6} md={3} key={i}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={3}
+              key={i}
+              sx={{ display: "flex", justifyContent: "center" }} // center each card
+            >
               <Card
                 sx={{
                   p: 4,
                   borderRadius: 3,
-                  height: 220,
+                  height: { xs: 200, md: 220 },
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -126,7 +138,9 @@ export default function RealEstatePlatform() {
                 }}
               >
                 {item.icon}
-                <Typography variant="h6" mt={2}>{item.title}</Typography>
+                <Typography variant="h6" mt={2} textAlign="center">
+                  {item.title}
+                </Typography>
               </Card>
             </Grid>
           ))}
@@ -139,14 +153,32 @@ export default function RealEstatePlatform() {
           Why Alawaly?
         </Typography>
 
-        <Grid container spacing={4} mt={2}>
+        <Grid
+          container
+          spacing={4}
+          mt={2}
+          justifyContent="center" // center the grid items
+        >
           {whyAlawaly.map((item, i) => (
-            <Grid item xs={12} md={4} key={i}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={i}
+              sx={{ display: "flex", justifyContent: "center" }} // center each card
+            >
               <Card
                 sx={{
                   p: 3,
                   borderRadius: 3,
+                  height: "100%",
+                  maxWidth: 300, // optional: limit width for uniformity
                   boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
                 }}
               >
                 <Typography>{item}</Typography>
@@ -156,7 +188,11 @@ export default function RealEstatePlatform() {
         </Grid>
       </Box>
 
-      <CardsGrid />
+
+      {/* FLIP CARDS GRID */}
+      <Box sx={{ py: 8, px: { xs: 3, md: 10 } }}>
+        <CardsGrid />
+      </Box>
     </Box>
   );
 }

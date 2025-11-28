@@ -5,8 +5,8 @@ import { useParams } from "next/navigation";
 import { projects } from "../data";
 
 export default function ProjectDetailPage() {
-  const params = useParams();     // ✅ get dynamic route params
-  const slug = params.slug;       // ✅ extract slug
+  const params = useParams();     
+  const slug = params.slug;       
 
   const project = projects.find((p) => p.slug === slug);
 
@@ -71,7 +71,7 @@ export default function ProjectDetailPage() {
       </Box>
 
       {/* SECTIONS */}
-      <Box sx={{ px: { xs: 3, md: 10 }, py: 10 }}>
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 10, mx:"auto", maxWidth:"1400px" }}>
         {project.sections.map((section, index) => (
           <Grid
             container

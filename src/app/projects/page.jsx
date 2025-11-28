@@ -65,7 +65,7 @@ export default function ProjectsPage() {
       </Box>
 
       {/* PROJECTS GRID */}
-      <Box sx={{ px: { xs: 3, md: 10 }, py: 8 }}>
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 8, mx:"auto", maxWidth:"1400px" }}>
         <Grid container spacing={4}>
           {projects.map((project) => (
             <Grid item xs={12} md={4} key={project.slug}>
